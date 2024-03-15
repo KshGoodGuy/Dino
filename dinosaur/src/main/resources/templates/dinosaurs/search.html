@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Dinosaurs</title>
+</head>
+<body>
+    <h1>Search Dinosaurs</h1>
+    <form th:action="@{/dinosaurs/search}" method="get">
+        <label for="name">Enter dinosaur name:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

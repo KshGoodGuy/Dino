@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dinosaur Profile</title>
+</head>
+<body>
+    <h1>Dinosaur Profile</h1>
+    <div th:if="${dinosaur}">
+        <p><strong>Name:</strong> <span th:text="${dinosaur.name}"></span></p>
+        <p><strong>Species:</strong> <span th:text="${dinosaur.species}"></span></p>
+        <p><strong>Size:</strong> <span th:text="${dinosaur.size}"></span> m</p>
+        <p><strong>Weight:</strong> <span th:text="${dinosaur.weight}"></span> kg</p>
+    </div>
+    <div th:unless="${dinosaur}">
+        <p>Dinosaur not found.</p>
+    </div>
+</body>
+</html>

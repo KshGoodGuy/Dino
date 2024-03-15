@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dinosaur List</title>
+</head>
+<body>
+    <h1>Dinosaur List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Species</th>
+                <th>Size</th>
+                <th>Weight</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="dinosaur : ${dinosaurs}">
+                <td th:text="${dinosaur.name}"></td>
+                <td th:text="${dinosaur.species}"></td>
+                <td th:text="${dinosaur.size}"></td>
+                <td th:text="${dinosaur.weight}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
