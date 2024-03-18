@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>공룡 목록</title>
+</head>
+<body>
+
+    <h1>공룡 목록</h1>
+    <ul>
+        <li th:each="dinosaur : ${dinosaurs}">
+            <span th:text="'이름: ' + ${dinosaur.name}">이름</span>,
+            <span th:text="'종: ' + ${dinosaur.species}">종</span>,
+            <span th:text="'크기: ' + ${dinosaur.size} + 'm'">크기</span>,
+            <span th:text="'몸무게: ' + ${dinosaur.weight} + 'kg'">몸무게</span>
+        </li>
+    </ul>
+    
+</body>
+</html>
